@@ -1,0 +1,27 @@
+<% include layout %>
+<div class="jumbotron">
+  <h1>Hola Mundo</h1>
+</div>
+<div class="panel-title">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Lista de grupos</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: grupos">
+          <tr>
+            <td data-bind="text: idGrupo"></td>
+            <td data-bind="text: nombre"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-danger" onclick="/api/grupo">Agregar</button>
+    </div>
+  </div>
+<% include footer %>
+<script src="/javascripts/app.grupo.js"></script>
